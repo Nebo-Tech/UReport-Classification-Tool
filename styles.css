@@ -1,0 +1,268 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fbeff4;
+    color: #333;
+  }
+  
+  /* .app-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+  } */
+
+  /* Add margin to main content to avoid overlap with the fixed header */
+.app-container {
+    margin-top: 60px; /* Add space equal to the header's height */
+  }
+  
+  /* Header
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aab5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+  } */
+
+  /* Header */
+
+  /* Header */
+header {
+  display: flex;
+  align-items: center;
+  background-color: #00aab5;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    flex: 1; /* Push the title to the left */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove default margin */
+  }
+  .menu {
+    margin-right: 15px; /* Space between the menu icon and title */
+    cursor: pointer;
+  }
+  .profile-icon {
+    margin-left: auto; /* Push profile icon to the far right */
+    cursor: pointer;
+  }
+ 
+  
+  /* Navigation Tabs
+  nav {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  } */
+  nav {
+    margin: 80px auto 20px auto; /* Add margin to create space below the header */
+    display: flex;
+    justify-content: center;
+  }
+  /* .tabs {
+    display: flex;
+    gap: 10px;
+  } */
+  .tabs {
+    display: flex;
+    gap: 10px;
+  }
+  /* .tab {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e5f7f8;
+    color: #333;
+    cursor: pointer;
+  } */
+  .tab {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e5f7f8;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* .tab.active {
+    background-color: #00aab5;
+    color: white;
+  } */
+  
+  .tab.active {
+    background-color: #00aab5;
+    color: white;
+  }
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+    /* Categories Wrapper */
+  .categories-wrapper {
+    display: flex;
+    justify-content: center; /* Center-align horizontally */
+    align-items: center; /* Center-align vertically */
+    margin: 20px auto;
+    position: relative;
+    width: 100%; /* Full width */
+  }
+    
+    /* Categories Container */
+  .categories-container {
+    display: flex;
+    overflow: hidden; /* Prevent overflow */
+    max-width: 90%; /* Constrain maximum width */
+  }
+
+    /* Categories List */
+  .categories {
+    display: flex;
+    gap: 15px; /* Adds space between category buttons */
+    flex-wrap: nowrap; /* Ensure buttons are horizontally aligned */
+  }
+
+    /* Category Button */
+  .category {
+    padding: 10px 20px; /* Adjust padding for better sizing */
+    border: 1px solid #ccc; /* Light border for clarity */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 12px; /* Match font size to text */
+    background-color: #e5f7f8; /* Light background color */
+    color: #333; /* Text color */
+    text-align: center; /* Ensure text is centered */
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+
+  .category.active {
+    background-color: #00aab5; /* Highlight active button */
+    /* color: white; */
+    border-color: #00aab5;
+  }
+
+
+    /* Scroll Button */
+  .scroll-btn {
+    font-size: 16px; /* Match font size to category text */
+    padding: 10px 20px; /* Same size as category buttons */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #00aab5; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer;
+    margin-left: 15px; /* Spacing from categories */
+  }
+
+
+  
+  /* Display scroll button when necessary */
+  .categories-wrapper.scrollable .scroll-btn {
+    display: block;
+  }
+
+  .category.active {
+    background-color: #00aab5;
+    /* color: white; */
+  }
+  
+  /* Question Section */
+  .questions {
+    /* background: white; */
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  /* Center-align Filters Section */
+.filters {
+  display: flex;
+  justify-content: center; /* Center-aligns the filters horizontally */
+  align-items: center; /* Vertically aligns items in the same row */
+  margin: 0px auto; /* Adds spacing above and below */
+  padding: 10px;
+  gap: 15px; /* Adds space between the buttons and text */
+}
+  
+/* Buttons in Filters Section */
+.filter {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #e5f7f8;
+  color: #333;
+}
+  
+.filter.active {
+  background-color: #00aab5;
+  color: white;
+}
+
+/* Styling for the question count text */
+.filters span {
+  font-weight: bold;
+  color: #666;
+}
+  
+ /* Center-align Questions Section */
+.questions {
+  display: flex;
+  justify-content: center; /* Center-aligns the entire questions section */
+  padding: 20px 0;
+}
+  
+.question-list {
+  width: 100%;
+  max-width: 900px; /* Limits the width for better readability */
+}
+
+.question {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+}
+  
+.question-header,
+.question-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+  
+.question-footer button {
+  border: none;
+  background: transparent;
+  color: #00aab5;
+  cursor: pointer;
+}
+  
